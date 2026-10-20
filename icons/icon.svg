@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="复制链接">
+  <defs>
+    <!-- 主体：同色系 2% 明度差的纵向渐变，只用来造光照感 -->
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b87eb"/>
+      <stop offset="1" stop-color="#5883eb"/>
+    </linearGradient>
+    <!-- 顶部高光 -->
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.20"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <!-- 底部收暗，做出实体厚度 -->
+    <linearGradient id="foot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.72" stop-color="#3f68e2" stop-opacity="0"/>
+      <stop offset="1" stop-color="#3f68e2" stop-opacity="0.22"/>
+    </linearGradient>
+    <!-- 图形：白到极浅蓝的微渐变 -->
+    <linearGradient id="glyph" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ebf1ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 底板 -->
+  <rect x="1" y="1" width="126" height="126" rx="28" fill="url(#tile)"/>
+  <rect x="1" y="1" width="126" height="126" rx="28" fill="url(#gloss)"/>
+  <rect x="1" y="1" width="126" height="126" rx="28" fill="url(#foot)"/>
+  <!-- 0.8px 级别的极细描边（128 画布里约 1.6 单位） -->
+  <rect x="1" y="1" width="126" height="126" rx="28" fill="none" stroke="#3f68e2" stroke-width="1.6"/>
+
+  <!-- 锁链图形：24 格坐标系放大 4.5 倍，四周留出呼吸空间 -->
+  <g transform="translate(10 10) scale(4.5)" fill="none" stroke="url(#glyph)" stroke-width="2.4"
+     stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+  </g>
+</svg>
